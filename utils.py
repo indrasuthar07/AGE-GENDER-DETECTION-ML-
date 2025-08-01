@@ -6,7 +6,13 @@ from tensorflow.keras.layers import InputLayer
 
 
 #load model
-model = load_model("model.keras")
+try:
+    model = load_model("model.keras", compile=False)
+except Exception as e:
+    import streamlit as st
+    st.error("Error loading model: {}".format(str(e)))
+    raise
+
 def preprocess_image(image):
     image = image.resize((128,128)).convert('L')
     image = img_to_array(image)
