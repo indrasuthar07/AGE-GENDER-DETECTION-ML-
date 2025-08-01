@@ -6,7 +6,7 @@ from tensorflow.keras.layers import InputLayer
 
 
 #load model
-model = load_model("age_gender_model.h5", custom_objects={'InputLayer': InputLayer})
+model = load_model("model.keras")
 def preprocess_image(image):
     image = image.resize((128,128)).convert('L')
     image = img_to_array(image)
