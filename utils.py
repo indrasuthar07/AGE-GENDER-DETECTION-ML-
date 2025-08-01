@@ -1,9 +1,12 @@
 import numpy as np
-from keras.models import load_model
 from keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.models import load_model
+from tensorflow.keras.layers import InputLayer
+
+
 
 #load model
-model = load_model('age_gender_model.h5') 
+model = load_model("model.h5", custom_objects={'InputLayer': InputLayer})
 def preprocess_image(image):
     image = image.resize((128,128)).convert('L')
     image = img_to_array(image)
