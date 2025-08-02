@@ -5,7 +5,7 @@ from tensorflow.keras.layers import InputLayer
 
 
 
-#load model
+#loading model
 try:
     model = load_model("model.keras", compile=False)
 except Exception as e:
