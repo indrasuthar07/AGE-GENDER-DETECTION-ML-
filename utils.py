@@ -1,5 +1,5 @@
 import numpy as np
-from keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.utils import load_img, img_to_array
 from tensorflow.keras.models import load_model
 from tensorflow.keras.layers import InputLayer
 
