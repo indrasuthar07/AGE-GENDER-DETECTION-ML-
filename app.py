@@ -79,3 +79,9 @@ if uploaded_file is not None:
             <p>👥 <strong>Predicted Gender:</strong> <code>{gender}</code></p>
         </div>
     """, unsafe_allow_html=True)
+else:
+    st.markdown("""
+        <div class="result-box">
+            <p>🔍 Please upload an image to get predictions.</p>
+        </div>
+    """, unsafe_allow_html=True)
